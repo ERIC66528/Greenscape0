@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Analytics - Rictei Business Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">RT</div>
+        <div><div style="font-weight:700">Analytics</div><div style="color:var(--muted);font-size:13px">BI & reports</div></div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="sales.html">Sales</a>
+        <a href="analytics.html" class="active">Analytics</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Business intelligence</div>
+            <div style="color:var(--muted);font-size:13px">Visualize and export insights</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <select id="period" class="input">
+              <option value="30">Last 30 days</option>
+              <option value="90">Last 90 days</option>
+              <option value="365">Last year</option>
+            </select>
+            <button class="btn" id="exportCsv">Export CSV</button>
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <div id="chartArea" class="card" style="height:280px;display:flex;align-items:center;justify-content:center">Charts rendered below</div>
+          <div style="margin-top:12px">
+            <div style="font-weight:700">Top performers</div>
+            <div class="list" id="topList"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Analytics uses exported records for offline processing.</div>
+    </main>
+  </div>
+  <script src="analytics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</body>
+  </html>
