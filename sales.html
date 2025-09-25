@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sales - Rictei Business Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">RT</div>
+        <div><div style="font-weight:700">Sales</div><div style="color:var(--muted);font-size:13px">Orders & payments</div></div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="sales.html" class="active">Sales</a>
+        <a href="analytics.html">Analytics</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Create order</div>
+            <div style="color:var(--muted);font-size:13px">Fast checkout and payment recording</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <select id="selectCustomer" class="input"></select>
+            <button class="btn" id="newOrder">New order</button>
+          </div>
+        </div>
+        <div style="margin-top:12px" id="orderSection">
+          <div id="orderForm" style="display:none">
+            <div class="form-row">
+              <select id="orderItem" class="input"></select>
+              <input id="orderQty" type="number" class="input" placeholder="Qty" />
+            </div>
+            <div class="form-row" style="margin-top:10px">
+              <input id="orderNote" class="input" placeholder="Note" />
+              <input id="orderTotal" class="input" placeholder="Total" readonly />
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button class="btn" id="processPay">Process payment</button>
+              <button class="btn secondary" id="cancelOrder">Cancel</button>
+            </div>
+          </div>
+          <div style="margin-top:12px">
+            <div class="table-responsive">
+              <table class="table" id="orderHistory">
+                <thead><tr><th>#</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Payments are simulated. Integrate Stripe / M-Pesa in production.</div>
+    </main>
+  </div>
+  <script src="sales.js"></script>
+</body>
+        </html>
