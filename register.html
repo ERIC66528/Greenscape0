@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rictei Business Suite - Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div style="width:100%;max-width:640px;margin:auto">
+    <div class="card" style="margin-top:40px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <div class="logo">RT</div>
+        <div>
+          <h2 style="margin:0">Create an account</h2>
+          <div style="color:var(--muted);font-size:13px">For teams and small businesses</div>
+        </div>
+      </div>
+      <div class="form-row" style="margin-top:12px">
+        <input id="rname" class="input" placeholder="Full name" />
+        <input id="remail" class="input" placeholder="Business email" />
+      </div>
+      <div class="form-row" style="margin-top:12px">
+        <input id="rphone" class="input" placeholder="Phone" />
+        <input id="rpassword" type="password" class="input" placeholder="Password" />
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn" id="registerBtn">Create account</button>
+        <button class="btn secondary" id="gotoLogin">Back to login</button>
+      </div>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">
+        Your data will be encrypted and stored.
+      </div>
+    </div>
+  </div>
+  <script src="auth.js"></script>
+</body>
+  </html>
