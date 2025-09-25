@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Customers - Rictei Business Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">RT</div>
+        <div><div style="font-weight:700">Customers</div><div style="color:var(--muted);font-size:13px">CRM & contacts</div></div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="customers.html" class="active">Customers</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="sales.html">Sales</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Customer relationship manager</div>
+            <div style="color:var(--muted);font-size:13px">Centralized customer records and notes</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <input id="custSearch" class="input" placeholder="Search customers" />
+            <button class="btn" id="newCustomer">New</button>
+          </div>
+        </div>
+        <div style="margin-top:12px" id="customerSection">
+          <div class="table-responsive">
+            <table class="table" id="customersTable">
+              <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Notes</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div style="margin-top:12px;display:none" id="customerForm">
+            <div class="form-row">
+              <input id="cname" class="input" placeholder="Full name" />
+              <input id="cemail" class="input" placeholder="Email" />
+            </div>
+            <div class="form-row" style="margin-top:10px">
+              <input id="cphone" class="input" placeholder="Phone" />
+              <input id="cnotes" class="input" placeholder="Notes" />
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button class="btn" id="saveCustomer">Save</button>
+              <button class="btn secondary" id="cancelCustomer">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Customer records are encrypted locally for demo.</div>
+    </main>
+  </div>
+  <script src="crm.js"></script>
+</body>
+</html>
