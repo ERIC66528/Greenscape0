@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inventory - Rictei Business Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">RT</div>
+        <div><div style="font-weight:700">Inventory</div><div style="color:var(--muted);font-size:13px">Stock & procurement</div></div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="customers.html">Customers</a>
+        <a href="inventory.html" class="active">Inventory</a>
+        <a href="sales.html">Sales</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Inventory management</div>
+            <div style="color:var(--muted);font-size:13px">Barcode, reorder, and stock alerts</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <input id="itemSearch" class="input" placeholder="Search items" />
+            <button class="btn" id="newItem">Add item</button>
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <div class="table-responsive">
+            <table class="table" id="itemsTable">
+              <thead><tr><th>SKU</th><th>Item</th><th>Stock</th><th>Reorder</th><th>Price</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="itemForm" style="margin-top:12px;display:none">
+            <div class="form-row">
+              <input id="sku" class="input" placeholder="SKU" />
+              <input id="iname" class="input" placeholder="Name" />
+            </div>
+            <div class="form-row" style="margin-top:10px">
+              <input id="stock" type="number" class="input" placeholder="Stock" />
+              <input id="reorder" type="number" class="input" placeholder="Reorder level" />
+            </div>
+            <div class="form-row" style="margin-top:10px">
+              <input id="price" type="number" class="input" placeholder="Price" />
+              <input id="supplier" class="input" placeholder="Supplier" />
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button class="btn" id="saveItem">Save</button>
+              <button class="btn secondary" id="cancelItem">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Inventory changes are recorded for audit.</div>
+    </main>
+  </div>
+  <script src="inventory.js"></script>
+</body>
+  </html>
