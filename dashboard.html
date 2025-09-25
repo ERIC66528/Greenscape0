@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rictei Business Suite - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">RT</div>
+        <div>
+          <div style="font-weight:700">Rictei Business Suite</div>
+          <div style="color:var(--muted);font-size:13px">Unified business control</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html" class="active">Overview</a>
+        <a href="customers.html">Customers</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="sales.html">Sales</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="support.html">Support</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div style="margin-top:auto">
+        <div class="badge center">System status: Healthy</div>
+        <div style="margin-top:8px;color:var(--muted);font-size:13px">Version 1.0 • Offline demo</div>
+      </div>
+    </aside>
+    <main>
+      <div class="card">
+        <div class="header">
+          <div class="search">
+            <input id="globalSearch" placeholder="Search customers, orders, inventory, messages" />
+          </div>
+          <div class="user">
+            <div id="userEmail" style="text-align:right">
+              <div style="font-weight:700" id="userName">Guest</div>
+              <div style="color:var(--muted);font-size:13px" id="userSub">Not signed in</div>
+            </div>
+            <div class="avatar" id="userAvatar">G</div>
+          </div>
+        </div>
+        <div class="grid" style="margin-bottom:16px">
+          <div class="kpi">
+            <h3>Monthly revenue</h3>
+            <p id="kpiRevenue">$0</p>
+            <div style="color:var(--muted);font-size:12px">Projected vs actual</div>
+          </div>
+          <div class="kpi">
+            <h3>Active customers</h3>
+            <p id="kpiCustomers">0</p>
+            <div style="color:var(--muted);font-size:12px">Last 30 days</div>
+          </div>
+          <div class="kpi">
+            <h3>Critical stock</h3>
+            <p id="kpiStock">0</p>
+            <div style="color:var(--muted);font-size:12px">Items below reorder</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;flex-direction:column">
+          <div class="card-row">
+            <div class="card" style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:700">Recent orders</div>
+                  <div style="color:var(--muted);font-size:13px">Latest customer purchases</div>
+                </div>
+                <div class="filter">
+                  <select id="orderFilter" class="input" style="width:160px">
+                    <option value="all">All orders</option>
+                    <option value="pending">Pending</option>
+                    <option value="paid">Paid</option>
+                    <option value="shipped">Shipped</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-responsive" style="margin-top:12px">
+                <table class="table" id="ordersTable">
+                  <thead><tr><th>Order</th><th>Customer</th><th>Status</th><th>Total</th></tr></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card" style="width:360px">
+              <div style="font-weight:700">Support (AI assistant)</div>
+              <div style="color:var(--muted);font-size:13px">24/7 quick help and ticketing</div>
+              <div class="chatbox" style="margin-top:12px">
+                <div class="messages" id="messages"></div>
+                <div style="display:flex;gap:8px;margin-top:8px">
+                  <input id="chatInput" class="input" placeholder="Ask the assistant or create ticket" />
+                  <button class="btn" id="sendChat">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="display:flex;gap:16px;align-items:flex-start">
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="font-weight:700">Inventory snapshot</div>
+                <div style="color:var(--muted);font-size:13px">Real-time approximate</div>
+              </div>
+              <div class="list" id="inventoryList" style="margin-top:12px"></div>
+            </div>
+            <div style="width:340px">
+              <div style="font-weight:700">Marketing summary</div>
+              <div style="color:var(--muted);font-size:13px">Latest campaigns and reach</div>
+              <div class="list" id="marketingList" style="margin-top:12px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Rictei Business Suite • Unified operations • Demo mode</div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+          </html>
