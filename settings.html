@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings - Rictei Business Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">RT</div>
+        <div><div style="font-weight:700">Settings</div><div style="color:var(--muted);font-size:13px">Security & integrations</div></div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="settings.html" class="active">Settings</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="card">
+        <div style="font-weight:700">Account & security</div>
+        <div style="margin-top:12px">
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="flex:1">
+              <div style="color:var(--muted);font-size:13px">Two-factor authentication</div>
+              <div style="margin-top:6px">Enable 2FA to protect access</div>
+            </div>
+            <div>
+              <button class="btn" id="toggle2fa">Enable</button>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:12px">
+            <div style="flex:1">
+              <div style="color:var(--muted);font-size:13px">Integrations</div>
+              <div style="margin-top:6px">Connect payment or cloud providers</div>
+            </div>
+            <div>
+              <button class="btn secondary" id="connectPayment">Connect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div style="font-weight:700">Team & roles</div>
+        <div style="margin-top:12px">
+          <div class="list" id="teamList"></div>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <input id="inviteEmail" class="input" placeholder="Invite email" />
+            <button class="btn" id="inviteBtn">Invite</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Production deployments require server-side configuration and secrets management.</div>
+    </main>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>
